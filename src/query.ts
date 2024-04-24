@@ -7,13 +7,13 @@ const queryClient = new QueryClient({
       useErrorBoundary: true,
       refetchOnWindowFocus: false,
       retry: 1,
-      retryDelay: 2000,
+      retryDelay: 1500,
     },
   },
 });
 
 const QueryKey = {
-  POSTS: "posts",
+  //..
 }
 
 export { queryClient, QueryKey };
