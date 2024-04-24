@@ -1,0 +1,1 @@
+export { SellsyError } from "./SellsyError";
