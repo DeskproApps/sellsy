@@ -36,32 +36,38 @@ export type FetchOptions = Pick<RequestParams, "method"|"headers"> & V2ProxyRequ
 
 /** Deskpro types */
 export type Settings = {
-  //..
+  client_id?: string;
+  client_secret?: string;
+};
+
+export type DPUser = {
+  id: string;
+  name: string;
+  firstName: string;
+  lastName: string;
+  titlePrefix: string;
+  isDisabled: boolean;
+  isAgent: boolean;
+  isConfirmed: boolean;
+  emails: string[];
+  primaryEmail: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  customFields: Dict<any>;
+  language: string;
+  locale: string;
 };
 
 export type UserData = {
-  user: {
-    id: string;
-    name: string;
-    firstName: string;
-    lastName: string;
-    titlePrefix: string;
-    isDisabled: boolean;
-    isAgent: boolean;
-    isConfirmed: boolean;
-    emails: string[];
-    primaryEmail: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    customFields: Dict<any>;
-    language: string;
-    locale: string;
-  },
+  user: DPUser;
 };
 
 export type UserContext = Context<UserData, Maybe<Settings>>;
 
 export type NavigateToChangePage = { type: "changePage", path: To };
 
+export type LogoutPayload = { type: "logout" };
+
 export type EventPayload =
   | NavigateToChangePage
+  | LogoutPayload
 ;

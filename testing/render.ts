@@ -19,7 +19,7 @@ interface WrapperOptions {
   router?: boolean|string;
 }
 
-interface RenderOptions extends TestingLibraryRenderOptions {
+type RenderOptions = TestingLibraryRenderOptions & {
   wrappers: WrapperOptions;
 }
 
