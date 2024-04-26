@@ -1,0 +1,160 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "code": "EUR",
+      "symbol": "\u20ac",
+      "is_default": true
+    },
+    {
+      "id": 2,
+      "code": "USD",
+      "symbol": "$",
+      "is_default": false
+    },
+    {
+      "id": 3,
+      "code": "YEN",
+      "symbol": "\u00a5",
+      "is_default": false
+    },
+    {
+      "id": 4,
+      "code": "GBP",
+      "symbol": "\u00a3",
+      "is_default": false
+    },
+    {
+      "id": 5,
+      "code": "MAD",
+      "symbol": "MAD",
+      "is_default": false
+    },
+    {
+      "id": 6,
+      "code": "DZD",
+      "symbol": "DZD",
+      "is_default": false
+    },
+    {
+      "id": 7,
+      "code": "DT",
+      "symbol": "DT",
+      "is_default": false
+    },
+    {
+      "id": 8,
+      "code": "CHF",
+      "symbol": "CHF",
+      "is_default": false
+    },
+    {
+      "id": 11,
+      "code": "CFA",
+      "symbol": "CFA",
+      "is_default": false
+    },
+    {
+      "id": 12,
+      "code": "Fcfp",
+      "symbol": "Fcfp",
+      "is_default": false
+    },
+    {
+      "id": 13,
+      "code": "INR",
+      "symbol": "INR",
+      "is_default": false
+    },
+    {
+      "id": 14,
+      "code": "NOK",
+      "symbol": "NOK",
+      "is_default": false
+    },
+    {
+      "id": 15,
+      "code": "AUD",
+      "symbol": "AUD",
+      "is_default": false
+    },
+    {
+      "id": 16,
+      "code": "NZD",
+      "symbol": "NZD",
+      "is_default": false
+    },
+    {
+      "id": 17,
+      "code": "AED",
+      "symbol": "AED",
+      "is_default": false
+    },
+    {
+      "id": 18,
+      "code": "NGN",
+      "symbol": "NGN",
+      "is_default": false
+    },
+    {
+      "id": 19,
+      "code": "SGD",
+      "symbol": "SGD",
+      "is_default": false
+    },
+    {
+      "id": 20,
+      "code": "THB",
+      "symbol": "THB",
+      "is_default": false
+    },
+    {
+      "id": 21,
+      "code": "MYR",
+      "symbol": "MYR",
+      "is_default": false
+    },
+    {
+      "id": 22,
+      "code": "IDR",
+      "symbol": "IDR",
+      "is_default": false
+    },
+    {
+      "id": 24,
+      "code": "CAD",
+      "symbol": "CAD",
+      "is_default": false
+    },
+    {
+      "id": 25,
+      "code": "ZAR",
+      "symbol": "ZAR",
+      "is_default": false
+    },
+    {
+      "id": 26,
+      "code": "TND",
+      "symbol": "TND",
+      "is_default": false
+    },
+    {
+      "id": 28,
+      "code": "HKD",
+      "symbol": "HKD",
+      "is_default": false
+    },
+    {
+      "id": 29,
+      "code": "RUB",
+      "symbol": "RUB",
+      "is_default": false
+    }
+  ],
+  "pagination": {
+    "limit": 25,
+    "count": 25,
+    "total": 170,
+    "offset": "WyIyOSJd"
+  }
+}

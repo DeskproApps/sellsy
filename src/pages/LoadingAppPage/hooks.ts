@@ -6,7 +6,8 @@ import {
   useInitialisedDeskproAppClient,
 } from "@deskpro/app-sdk";
 import { getEntityListService } from "../../services/deskpro";
-import { getCurrenciesService } from "../../services/sellsy";
+import { checkAuthService } from "../../services/sellsy";
+import { tryToLinkAutomatically } from "../../utils";
 import type { UserContext } from "../../types";
 
 type UseCheckAuth = () => void;
@@ -21,7 +22,8 @@ const useLoadingApp: UseCheckAuth = () => {
       return;
     }
 
-    getCurrenciesService(client)
+    checkAuthService(client)
+      .then(() => tryToLinkAutomatically(client, dpUser))
       .then(() => getEntityListService(client, dpUser.id))
       .then((entityIds) => navigate(size(entityIds) ? "/home" : "/contacts/link"))
       .catch(() => navigate("/login"));
