@@ -1,0 +1,1 @@
+export { SellsyLogo } from "./SellsyLogo";

@@ -25,6 +25,8 @@ export const placeholders = {
 };
 
 /** Sellsy Pro */
+export const SELLSY_URL = "https://www.sellsy.com";
+
 export const AUTH_URL = "https://login.sellsy.com/oauth2";
 
 export const BASE_URL = "https://api.sellsy.com/v2";

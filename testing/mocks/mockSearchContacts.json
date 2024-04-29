@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": "f023edd4f21c2c0363f0b79e9565b51e",
+      "object": {
+        "type": "contact",
+        "sub_type": "contact",
+        "id": 53585209
+      },
+      "owner": {
+        "type": "staff",
+        "id": 305887
+      },
+      "created": "2024-04-23T11:43:14+00:00",
+      "updated": "2024-04-23T11:43:14+00:00",
+      "is_archived": false,
+      "first_name": "Ivan",
+      "last_name": "Vyhovsky",
+      "civility": "mr",
+      "mobile_number": "",
+      "fax_number": "",
+      "phone_number": "+442035821980",
+      "email": "ivan.vyhovsky@cossacks.org",
+      "position": "Hetman",
+      "companies": [],
+      "invoicing_address": null,
+      "delivery_address": null
+    },
+    {
+      "id": "b997a01f9952638fa392f7c8e010541f",
+      "object": {
+        "type": "contact",
+        "sub_type": "contact",
+        "id": 53585166
+      },
+      "owner": {
+        "type": "staff",
+        "id": 305887
+      },
+      "created": "2024-04-23T11:39:42+00:00",
+      "updated": "2024-04-23T11:40:41+00:00",
+      "is_archived": false,
+      "first_name": "Ivan",
+      "last_name": "Mazepa",
+      "civility": "mr",
+      "mobile_number": "",
+      "fax_number": "",
+      "phone_number": "+442035821980",
+      "email": "ivan.mazepa@cossacks.org",
+      "position": "Hetman",
+      "companies": [],
+      "invoicing_address": null,
+      "delivery_address": null
+    },
+    {
+      "id": "71c4cf091198a4b78b30985cce9f2b3c",
+      "object": {
+        "type": "contact",
+        "sub_type": "contact",
+        "id": 53585108
+      },
+      "owner": {
+        "type": "staff",
+        "id": 305887
+      },
+      "created": "2024-04-23T11:35:28+00:00",
+      "updated": "2024-04-23T11:35:28+00:00",
+      "is_archived": false,
+      "first_name": "Bohdan",
+      "last_name": "Khmelnytsky",
+      "civility": "mr",
+      "mobile_number": "",
+      "fax_number": "",
+      "phone_number": "+442035821980",
+      "email": "bohdan.khmelnytsky@cossacks.org",
+      "position": "Hetman",
+      "companies": [],
+      "invoicing_address": null,
+      "delivery_address": null
+    }
+  ],
+  "aggregations": {
+    "count_by_type": {
+      "contact": [
+        3,
+        0
+      ]
+    }
+  },
+  "pagination": {
+    "limit": 25,
+    "count": 3,
+    "total": 3,
+    "offset": "WzE1Ljg2NzY2NCwiNTM1ODUxMDgiLCJjb250YWN0Il0="
+  }
+}

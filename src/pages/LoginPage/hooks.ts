@@ -12,9 +12,9 @@ import {
   setAccessTokenService,
   setRefreshTokenService,
 } from "../../services/deskpro";
-import { getAccessTokenService, getCurrenciesService } from "../../services/sellsy";
+import { getAccessTokenService, checkAuthService } from "../../services/sellsy";
 import { useAsyncError } from "../../hooks";
-import { getQueryParams } from "../../utils";
+import { getQueryParams, tryToLinkAutomatically } from "../../utils";
 import { DEFAULT_ERROR, AUTH_URL } from "../../constants";
 import {
   generateCodeVerifier,
@@ -93,7 +93,8 @@ const useLogin = (): Result => {
           || DEFAULT_ERROR
         );
       })
-      .then(() => getCurrenciesService(client)) // check auth
+      .then(() => checkAuthService(client))
+      .then(() => tryToLinkAutomatically(client, dpUser))
       .then(() => getEntityListService(client, dpUser.id))
       .then((entityIds) => navigate(size(entityIds) ? "/home" : "/contacts/link"))
       .catch(asyncErrorHandler)
