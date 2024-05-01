@@ -7,3 +7,4 @@ export { isNavigatePayload } from "./isNavigatePayload";
 export { getFullName } from "./getFullName";
 export { getExternalLinks } from "./getExternalLinks";
 export { tryToLinkAutomatically } from "./tryToLinkAutomatically";
+export { isLast } from "./isLast";

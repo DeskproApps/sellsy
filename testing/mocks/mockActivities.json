@@ -1,0 +1,174 @@
+{
+  "data": [
+    {
+      "id": "YiYQL48Bf6aklqzyQuLf",
+      "author": {
+        "type": "staff",
+        "id": 305887
+      },
+      "due_date": "2024-04-29T14:50:00+02:00",
+      "event_date": "2024-04-30T14:52:25+02:00",
+      "event_details": {
+        "source": "outcoming",
+        "status": "scheduled",
+        "label": "5807452",
+        "priority": 0
+      },
+      "object": {
+        "type": "phonecall",
+        "id": 5513424,
+        "model": {
+          "id": 5513424,
+          "owner": {
+            "id": 305887,
+            "type": "staff"
+          },
+          "source": "outcoming",
+          "description": null,
+          "updated": "2024-04-30T14:52:25+02:00",
+          "created": "2024-04-30T14:52:25+02:00",
+          "duration": 0,
+          "date": "2024-04-29T14:50:00+02:00",
+          "topic": {
+            "id": 5807452,
+            "name": "Support"
+          },
+          "result": {
+            "id": "scheduled",
+            "name": "Appel planifi\u00e9"
+          },
+          "related": [
+            {
+              "type": "contact",
+              "id": 53581726
+            },
+            {
+              "type": "company",
+              "id": 53867649
+            }
+          ],
+          "company_id": 53867649,
+          "individual_id": null,
+          "contact_id": 53581726,
+          "priority": 0
+        }
+      },
+      "event": "phonecall.created",
+      "event_more": [],
+      "related": [
+        {
+          "type": "company",
+          "id": 53867649
+        },
+        {
+          "type": "contact",
+          "id": 53581726
+        },
+        {
+          "type": "thirdcontact",
+          "id": 53088082
+        },
+        {
+          "type": "thirdcontact",
+          "id": 53299834
+        },
+        {
+          "type": "company",
+          "id": 53867647
+        },
+        {
+          "type": "staff",
+          "id": 305887
+        }
+      ]
+    },
+    {
+      "id": "OCYRL48Bf6aklqzyD-TK",
+      "author": {
+        "type": "staff",
+        "id": 305887
+      },
+      "due_date": "2024-04-30T10:00:00+02:00",
+      "event_date": "2024-04-30T14:53:17+02:00",
+      "event_details": {
+        "source": "outcoming",
+        "status": "busy",
+        "label": "5807452",
+        "priority": 0
+      },
+      "object": {
+        "type": "phonecall",
+        "id": 5513452,
+        "model": {
+          "id": 5513452,
+          "owner": {
+            "id": 305887,
+            "type": "staff"
+          },
+          "source": "outcoming",
+          "description": "hey hey hey",
+          "updated": "2024-04-30T14:53:17+02:00",
+          "created": "2024-04-30T14:53:17+02:00",
+          "duration": 0,
+          "date": "2024-04-30T10:00:00+02:00",
+          "topic": {
+            "id": 5807452,
+            "name": "Support"
+          },
+          "result": {
+            "id": "busy",
+            "name": "Occup\u00e9"
+          },
+          "related": [
+            {
+              "type": "contact",
+              "id": 53581726
+            },
+            {
+              "type": "company",
+              "id": 53867649
+            }
+          ],
+          "company_id": 53867649,
+          "individual_id": null,
+          "contact_id": 53581726,
+          "priority": 0
+        }
+      },
+      "event": "phonecall.created",
+      "event_more": [],
+      "related": [
+        {
+          "type": "company",
+          "id": 53867649
+        },
+        {
+          "type": "contact",
+          "id": 53581726
+        },
+        {
+          "type": "thirdcontact",
+          "id": 53088082
+        },
+        {
+          "type": "thirdcontact",
+          "id": 53299834
+        },
+        {
+          "type": "company",
+          "id": 53867647
+        },
+        {
+          "type": "staff",
+          "id": 305887
+        }
+      ]
+    }
+  ],
+  "pagination": {
+    "limit": 25,
+    "count": 2,
+    "total": 2,
+    "offset": "WyI1NTEzNDUyIiwicGhvbmVjYWxsLmNyZWF0ZWQiLDE3MTQ0ODE1OTgwMDAsMzFd"
+  }
+}
