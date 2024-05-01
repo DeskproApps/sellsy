@@ -1,0 +1,61 @@
+{
+  "id": 53585175,
+  "civility": "mr",
+  "first_name": "Pylyp",
+  "last_name": "Orlyk",
+  "email": "pylyp.orlyk@zaporizhian.org",
+  "website": null,
+  "phone_number": "+442035821980",
+  "mobile_number": null,
+  "fax_number": null,
+  "position": "Hetman",
+  "avatar": null,
+  "note": "",
+  "birth_date": null,
+  "invoicing_address_id": null,
+  "delivery_address_id": null,
+  "is_archived": false,
+  "created": "2024-04-23T13:40:17+02:00",
+  "updated": "2024-04-23T13:41:02+02:00",
+  "social": {
+    "twitter": null,
+    "facebook": null,
+    "linkedin": null,
+    "viadeo": null
+  },
+  "sync": {
+    "mailchimp": false,
+    "mailjet": false,
+    "simplemail": false
+  },
+  "owner": {
+    "id": 305887,
+    "type": "staff"
+  },
+  "marketing_campaigns_subscriptions": [],
+  "rgpd_consent": {
+    "email": false,
+    "sms": false,
+    "phone": false,
+    "postal_mail": false,
+    "custom": false
+  },
+  "_embed": {
+    "smart_tags": null,
+    "invoicing_address": null,
+    "delivery_address": null,
+    "opportunities": 0,
+    "estimates": null,
+    "invoices": null,
+    "deliveries": null,
+    "orders": null,
+    "acl": {
+      "can_be_updated": true,
+      "can_be_deleted": true,
+      "view_contacts_addresses": true,
+      "create_contacts_addresses": true,
+      "update_contacts_addresses": true,
+      "delete_contacts_addresses": true
+    }
+  }
+}

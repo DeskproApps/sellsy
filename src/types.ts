@@ -20,7 +20,8 @@ export type RequestParams = {
   url?: string;
   rawUrl?: string;
   method?: ApiRequestMethod;
-  data?: Dict<string>|RequestInit["body"]|V2ProxyRequestInitBody["body"];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data?: Dict<any>|RequestInit["body"]|V2ProxyRequestInitBody["body"];
   headers?: Dict<string>;
   queryParams?: string|Dict<string>|ParamKeyValuePair[];
   settings?: Settings;
@@ -65,9 +66,12 @@ export type UserContext = Context<UserData, Maybe<Settings>>;
 
 export type NavigateToChangePage = { type: "changePage", path: To };
 
+export type UnlinkPayload = { type: "unlink" };
+
 export type LogoutPayload = { type: "logout" };
 
 export type EventPayload =
   | NavigateToChangePage
+  | UnlinkPayload
   | LogoutPayload
 ;

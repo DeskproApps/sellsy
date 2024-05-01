@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { ErrorBoundary } from "react-error-boundary";
 import { useDebouncedCallback } from "use-debounce";
 import { match } from "ts-pattern";
 import {
@@ -8,7 +9,7 @@ import {
   useDeskproAppClient,
   useDeskproAppEvents,
 } from "@deskpro/app-sdk";
-import { useLogout } from "./hooks";
+import { useLogout, useUnlinkContact } from "./hooks";
 import { isNavigatePayload } from "./utils";
 import {
   HomePage,
@@ -17,6 +18,7 @@ import {
   LinkContactPage,
   AdminCallbackPage,
 } from "./pages";
+import { ErrorFallback } from "./components";
 import type { FC } from "react";
 import type { EventPayload } from "./types";
 
@@ -24,8 +26,12 @@ const App: FC = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { client } = useDeskproAppClient();
+  const { unlink, isLoading: isLoadingUnlink } = useUnlinkContact();
   const { logout, isLoading: isLoadingLogout } = useLogout();
   const isAdmin = useMemo(() => pathname.includes("/admin/"), [pathname]);
+  const isLoading = useMemo(() => {
+    return !client || isLoadingUnlink || isLoadingLogout
+  }, [client, isLoadingUnlink, isLoadingLogout]);
 
   useDeskproElements(({ registerElement }) => {
     registerElement("refresh", { type: "refresh_button" });
@@ -34,6 +40,7 @@ const App: FC = () => {
   const debounceElementEvent = useDebouncedCallback((_, __, payload: EventPayload) => {
     return match(payload.type)
       .with("changePage", () => isNavigatePayload(payload) && navigate(payload.path))
+      .with("unlink", unlink)
       .with("logout", logout)
       .run();
   }, 500);
@@ -47,14 +54,14 @@ const App: FC = () => {
     onElementEvent: debounceElementEvent,
   }, [client]);
 
-  if (!client || isLoadingLogout) {
+  if (isLoading) {
     return (
       <LoadingSpinner/>
     );
   }
 
   return (
-    <>
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Routes>
         <Route path="/admin/callback" element={<AdminCallbackPage/>}/>
         <Route path="/login" element={<LoginPage/>}/>
@@ -63,7 +70,7 @@ const App: FC = () => {
         <Route index element={<LoadingAppPage/>} />
       </Routes>
       {!isAdmin && (<><br/><br/><br/></>)}
-    </>
+    </ErrorBoundary>
   );
 };
 

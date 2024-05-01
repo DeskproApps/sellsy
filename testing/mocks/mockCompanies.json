@@ -1,0 +1,116 @@
+{
+  "data": [
+    {
+      "id": 53867647,
+      "name": "Soci\u00e9t\u00e9 X (test)",
+      "email": "contact+x@sellsy.com",
+      "website": null,
+      "phone_number": null,
+      "mobile_number": null,
+      "fax_number": null,
+      "capital": null,
+      "reference": null,
+      "note": "",
+      "accounting_code_id": null,
+      "accounting_purchase_code_id": null,
+      "auxiliary_code": "0SOCI001",
+      "main_contact_id": 53581726,
+      "invoicing_contact_id": 53581724,
+      "dunning_contact_id": 53581724,
+      "invoicing_address_id": null,
+      "delivery_address_id": null,
+      "rate_category_id": null,
+      "created": "2024-04-23T11:03:39+02:00",
+      "updated_at": "2024-04-30T11:50:27+02:00",
+      "is_archived": false,
+      "type": "client",
+      "social": {
+        "twitter": null,
+        "facebook": null,
+        "linkedin": null,
+        "viadeo": null
+      },
+      "legal_france": {
+        "siret": "1234567891011",
+        "siren": "123456789",
+        "vat": "FR11223344556",
+        "ape_naf_code": "93.19Z",
+        "company_type": "Association d\u00e9clar\u00e9e",
+        "rcs_immatriculation": null
+      },
+      "owner": {
+        "id": 305887,
+        "type": "staff"
+      },
+      "business_segment": null,
+      "number_of_employees": null,
+      "marketing_campaigns_subscriptions": [],
+      "rgpd_consent": {
+        "email": false,
+        "sms": false,
+        "phone": false,
+        "postal_mail": false,
+        "custom": false
+      }
+    },
+    {
+      "id": 53867649,
+      "name": "Soci\u00e9t\u00e9 A (test)",
+      "email": "contact+a@sellsy.com",
+      "website": null,
+      "phone_number": null,
+      "mobile_number": null,
+      "fax_number": null,
+      "capital": "10000",
+      "reference": null,
+      "note": "",
+      "accounting_code_id": null,
+      "accounting_purchase_code_id": null,
+      "auxiliary_code": "9SOCI001",
+      "main_contact_id": null,
+      "invoicing_contact_id": 53581726,
+      "dunning_contact_id": 53581726,
+      "invoicing_address_id": null,
+      "delivery_address_id": null,
+      "rate_category_id": null,
+      "created": "2024-04-20T11:03:39+02:00",
+      "updated_at": "2024-04-20T11:03:39+02:00",
+      "is_archived": false,
+      "type": "prospect",
+      "social": {
+        "twitter": null,
+        "facebook": null,
+        "linkedin": null,
+        "viadeo": null
+      },
+      "legal_france": {
+        "siret": "1234567891013",
+        "siren": "123456782",
+        "vat": "FR11223344558",
+        "ape_naf_code": "10.83Z",
+        "company_type": "Soci\u00e9t\u00e9 \u00e0 responsabilit\u00e9 limit\u00e9e",
+        "rcs_immatriculation": null
+      },
+      "owner": {
+        "id": 305887,
+        "type": "staff"
+      },
+      "business_segment": null,
+      "number_of_employees": null,
+      "marketing_campaigns_subscriptions": [],
+      "rgpd_consent": {
+        "email": false,
+        "sms": false,
+        "phone": false,
+        "postal_mail": false,
+        "custom": false
+      }
+    }
+  ],
+  "pagination": {
+    "limit": 25,
+    "count": 2,
+    "total": 2,
+    "offset": "WyI1Mzg2NzY0OSJd"
+  }
+}

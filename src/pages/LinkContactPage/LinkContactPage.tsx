@@ -27,13 +27,13 @@ const LinkContactPage: FC = () => {
   const onCancel = useCallback(() => navigate("/home"), [navigate]);
 
   const onLinkContact = useCallback(() => {
-    if (!client || !dpUserId || !selectedContact?.id) {
+    if (!client || !dpUserId || !get(selectedContact, ["object", "id"])) {
       return;
     }
 
     setIsSubmitting(true);
 
-    return setEntityService(client, dpUserId, `${selectedContact.id}`)
+    return setEntityService(client, dpUserId, `${get(selectedContact, ["object", "id"])}`)
       .then(() => navigate("/home"))
       .catch(asyncErrorHandler)
       .finally(() => setIsSubmitting(false));

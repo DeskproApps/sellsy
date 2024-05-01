@@ -24,7 +24,7 @@ const tryToLinkAutomatically = async (
 
   try {
     const contacts = await searchContactsService(client, email);
-    contactId = get(contacts, ["data", 0, "id"]);
+    contactId = get(contacts, ["data", 0, "object", "id"]);
   } catch (e) {
     return;
   }
