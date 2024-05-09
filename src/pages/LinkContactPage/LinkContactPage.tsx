@@ -24,6 +24,8 @@ const LinkContactPage: FC = () => {
 
   const onChangeSearch = useDebouncedCallback(setSearchQuery, 1000);
 
+  const onNavigateToCreate = useCallback(() => navigate("/contacts/create"), [navigate]);
+
   const onCancel = useCallback(() => navigate("/home"), [navigate]);
 
   const onLinkContact = useCallback(() => {
@@ -57,6 +59,7 @@ const LinkContactPage: FC = () => {
       onLinkContact={onLinkContact}
       onChangeSearch={onChangeSearch}
       selectedContact={selectedContact}
+      onNavigateToCreate={onNavigateToCreate}
       onChangeSelectedContact={setSelectedContact}
     />
   );

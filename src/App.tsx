@@ -17,6 +17,7 @@ import {
   LoadingAppPage,
   LinkContactPage,
   AdminCallbackPage,
+  CreateContactPage,
 } from "./pages";
 import { ErrorFallback } from "./components";
 import type { FC } from "react";
@@ -67,6 +68,7 @@ const App: FC = () => {
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/home" element={<HomePage/>}/>
         <Route path="/contacts/link" element={<LinkContactPage/>}/>
+        <Route path="/contacts/create" element={<CreateContactPage/>}/>
         <Route index element={<LoadingAppPage/>} />
       </Routes>
       {!isAdmin && (<><br/><br/><br/></>)}

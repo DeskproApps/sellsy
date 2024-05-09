@@ -5,3 +5,5 @@ export { Container } from "./Layout";
 export { Card } from "./Card";
 export { NoFound } from "./NoFound";
 export { SellsyLogo } from "./SellsyLogo";
+export { Navigation } from "./Navigation";
+export { Label } from "./Label";

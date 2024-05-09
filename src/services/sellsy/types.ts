@@ -32,3 +32,5 @@ export type Company = paths["/contacts/{id}/companies"]["get"]["responses"]["200
 export type Activity = components["schemas"]["Activity"];
 
 export type ActivityType = paths["/timeline/{type}/{id}/search"]["parameters"]["path"]["type"];
+
+export type ContactCreateInput = components["schemas"]["ContactCreateItem"];
