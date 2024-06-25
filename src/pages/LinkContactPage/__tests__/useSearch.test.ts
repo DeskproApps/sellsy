@@ -1,6 +1,7 @@
 import { cleanup, renderHook, waitFor } from "@testing-library/react";
+import { wrap } from "@deskpro/app-testing-utils";
 import { searchContactsService } from "../../../services/sellsy";
-import { mockSearchContacts, wrap } from "../../../../testing";
+import { mockSearchContacts } from "../../../../testing";
 import { useSearch } from "../hooks";
 import type { Result } from "../hooks";
 

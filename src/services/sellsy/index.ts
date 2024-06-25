@@ -7,3 +7,4 @@ export { getContactService } from "./getContactService";
 export { getContactCompaniesService } from "./getContactCompaniesService";
 export { getActivitiesService } from "./getActivitiesService";
 export { createContactService } from "./createContactService";
+export { updateContactService } from "./updateContactService";

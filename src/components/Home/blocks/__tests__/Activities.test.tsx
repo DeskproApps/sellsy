@@ -1,5 +1,6 @@
 import { cleanup } from "@testing-library/react";
-import { render, mockActivities } from "../../../../../testing";
+import { render } from "@deskpro/app-testing-utils";
+import { mockActivities } from "../../../../../testing";
 import { Activities } from "../Activities";
 import type { Props } from "../Activities";
 
