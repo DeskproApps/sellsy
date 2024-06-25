@@ -1,6 +1,7 @@
 import { cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { render, mockSearchContacts } from "../../../../../testing";
+import { render } from "@deskpro/app-testing-utils";
+import { mockSearchContacts } from "../../../../../testing";
 import { Buttons } from "../Buttons";
 import type { Props } from "../Buttons";
 

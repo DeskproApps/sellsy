@@ -1,5 +1,6 @@
 import { cleanup } from "@testing-library/react";
-import { render, mockContact } from "../../../../testing";
+import { render } from "@deskpro/app-testing-utils";
+import { mockContact } from "../../../../testing";
 import { ContactForm } from "../ContactForm";
 import type { Props } from "../types";
 

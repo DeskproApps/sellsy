@@ -16,6 +16,7 @@ import {
   LoginPage,
   LoadingAppPage,
   LinkContactPage,
+  EditContactPage,
   AdminCallbackPage,
   CreateContactPage,
 } from "./pages";
@@ -69,6 +70,7 @@ const App: FC = () => {
         <Route path="/home" element={<HomePage/>}/>
         <Route path="/contacts/link" element={<LinkContactPage/>}/>
         <Route path="/contacts/create" element={<CreateContactPage/>}/>
+        <Route path="/contacts/edit" element={<EditContactPage/>}/>
         <Route index element={<LoadingAppPage/>} />
       </Routes>
       {!isAdmin && (<><br/><br/><br/></>)}

@@ -1,5 +1,5 @@
 import { cleanup } from "@testing-library/react";
-import { render } from "../../../../testing";
+import { render } from "@deskpro/app-testing-utils";
 import { AdminCallback } from "../AdminCallback";
 
 import type { Props } from "../AdminCallback";

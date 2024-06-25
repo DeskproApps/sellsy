@@ -9,17 +9,15 @@ const HomePage: FC = () => {
   useSetTitle();
 
   useRegisterElements(({ registerElement }) => {
+    registerElement("edit", {
+      type: "edit_button",
+      payload: { type: "changePage", path: `/contacts/edit` },
+    });
     registerElement("menu", {
       type: "menu",
       items: [
-        {
-          title: "Log Out",
-          payload: { type: "logout" },
-        },
-        {
-          title: "Unlink Contact",
-          payload: { type: "unlink" },
-        },
+        { title: "Log Out", payload: { type: "logout" } },
+        { title: "Unlink Contact", payload: { type: "unlink" } },
       ],
     });
   });

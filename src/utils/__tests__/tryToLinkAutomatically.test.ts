@@ -1,8 +1,9 @@
 import { cleanup, act, waitFor } from "@testing-library/react";
 import { tryToLinkAutomatically } from "../tryToLinkAutomatically";
 import { getEntityListService, setEntityService } from "../../services/deskpro";
+import { mockClient, mockUserContext } from "@deskpro/app-testing-utils";
 import { searchContactsService } from "../../services/sellsy";
-import { mockClient, mockSearchContacts, mockUserContext } from "../../../testing";
+import { mockSearchContacts } from "../../../testing";
 
 jest.mock("../../services/deskpro/getEntityListService");
 jest.mock("../../services/deskpro/setEntityService");
