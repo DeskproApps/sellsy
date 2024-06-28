@@ -143,12 +143,6 @@
       "code": "HKD",
       "symbol": "HKD",
       "is_default": false
-    },
-    {
-      "id": 29,
-      "code": "RUB",
-      "symbol": "RUB",
-      "is_default": false
     }
   ],
   "pagination": {

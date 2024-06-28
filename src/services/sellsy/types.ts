@@ -3,7 +3,15 @@ import type { components, paths } from "./schema";
 
 export type Response<T> = Promise<T>;
 
-export type Pagination<T> = { data: T[] };
+export type Pagination<T> = {
+  data: T[],
+  pagination: {
+    limit: number;
+    count: number;
+    total: number;
+    offset: string;
+  }
+};
 
 export type SellsyAPIError = {
   error: {
