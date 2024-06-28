@@ -1,5 +1,6 @@
-import { get, size } from "lodash";
-import { Title } from "@deskpro/app-sdk";
+import { Fragment } from "react";
+import { map, size } from "lodash";
+import {HorizontalDivider, Title} from "@deskpro/app-sdk";
 import { NoFound } from "../../../common";
 import { isLast } from "../../../../utils";
 import { ActivityItem } from "./ActivityItem";
@@ -16,12 +17,16 @@ const Activities: FC<Props> = ({ activities }) => {
       <Title title={`Activities (${size(activities)})`}/>
       {(!Array.isArray(activities) || !size(activities))
         ? <NoFound text="No activities found"/>
-        : activities.map((activity, idx) => (
-          <ActivityItem
-            key={get(activity, ["id"])}
-            isLast={isLast(activities, idx)}
-            activity={activity}
-          />
+        : map(activities, (activity, idx) => (
+          <Fragment>
+            <ActivityItem
+              key={activity.id}
+              activity={activity}
+            />
+            {!isLast(activities, idx) && (
+              <HorizontalDivider style={{ marginBottom: 10 }}/>
+            )}
+          </Fragment>
         ))
       }
     </>
