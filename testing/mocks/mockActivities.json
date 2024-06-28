@@ -1,137 +1,96 @@
 {
   "data": [
     {
-      "id": "YiYQL48Bf6aklqzyQuLf",
+      "id": "oookVZABSRyhjBW9joFC",
       "author": {
         "type": "staff",
-        "id": 305887
+        "id": 312002
       },
-      "due_date": "2024-04-29T14:50:00+02:00",
-      "event_date": "2024-04-30T14:52:25+02:00",
-      "event_details": {
-        "source": "outcoming",
-        "status": "scheduled",
-        "label": "5807452",
-        "priority": 0
-      },
+      "due_date": "2024-06-26T17:22:57+02:00",
+      "event_date": "2024-06-26T17:22:57+02:00",
+      "event_details": null,
       "object": {
-        "type": "phonecall",
-        "id": 5513424,
-        "model": {
-          "id": 5513424,
-          "owner": {
-            "id": 305887,
-            "type": "staff"
-          },
-          "source": "outcoming",
-          "description": null,
-          "updated": "2024-04-30T14:52:25+02:00",
-          "created": "2024-04-30T14:52:25+02:00",
-          "duration": 0,
-          "date": "2024-04-29T14:50:00+02:00",
-          "topic": {
-            "id": 5807452,
-            "name": "Support"
-          },
-          "result": {
-            "id": "scheduled",
-            "name": "Appel planifi\u00e9"
-          },
-          "related": [
-            {
-              "type": "contact",
-              "id": 53581726
-            },
-            {
-              "type": "company",
-              "id": 53867649
-            }
-          ],
-          "company_id": 53867649,
-          "individual_id": null,
-          "contact_id": 53581726,
-          "priority": 0
+        "type": "emailengine",
+        "id": "-NMkVZAB5f0DGLvohERj",
+        "model": null
+      },
+      "event": "emailengine.sent",
+      "event_more": {
+        "subject": "Second email",
+        "snippet": "\u003Cp\u003ESure! Here\u0027s a sample text with various formatting:\u003C\/p\u003E\u003Cp\u003EHey there! \ud83d\udc4b\u003C\/p\u003E\u003Cp\u003E\u003Cstrong\u003EBold text\u003C\/strong\u003E \u003Cem\u003EItalic text\u003C\/em\u003E\u003C\/p\u003E\u003Cul\u003E\u003Cli\u003E\u003Cp\u003EItem 1\u003C\/p\u003E\u003C\/li\u003E\u003Cli\u003E\u003Cp\u003EItem 2\u003C\/p\u003E\u003C\/li\u003E\u003C\/ul\u003E\u003Col\u003E\u003Cli\u003E\u003Cp\u003EFirst item\u003C\/p\u003E\u003C\/li\u003E\u003Cli\u003E\u003Cp\u003ESecond item\u003C\/p\u003E\u003C\/li\u003E\u003C\/ol\u003E\u003Cp\u003E\u003Ca href=\u0022https:\/\/www.example.com\u0022\u003ELink to website\u003C\/a\u003E\u003C\/p\u003E\u003Cp\u003EBlockquote text\u003C\/p\u003E\u003Cp\u003EFeel free to reach out if you need any further assistance!\u003C\/p\u003E\u003Cp\u003EDeskpro Ltd. - Mr Ilia Makarov\u003Cbr \/\u003Ephone. : \u003Ca\u003E063 105 5414\u003C\/a\u003E\u003C\/p\u003E",
+        "thread_id": null,
+        "message_id": null,
+        "provider": "nylas",
+        "from": {
+          "email": "xzpawnx@gmail.com",
+          "name": "Ilia Makarov"
         }
       },
-      "event": "phonecall.created",
-      "event_more": [],
       "related": [
         {
-          "type": "company",
-          "id": 53867649
-        },
-        {
           "type": "contact",
-          "id": 53581726
+          "id": 55169850
         },
         {
           "type": "thirdcontact",
-          "id": 53088082
-        },
-        {
-          "type": "thirdcontact",
-          "id": 53299834
+          "id": 55150222
         },
         {
           "type": "company",
-          "id": 53867647
+          "id": 55532589
         },
         {
           "type": "staff",
-          "id": 305887
+          "id": 312002
         }
       ]
     },
     {
-      "id": "OCYRL48Bf6aklqzyD-TK",
+      "id": "j4cMVJABSRyhjBW9EEUZ",
       "author": {
         "type": "staff",
-        "id": 305887
+        "id": 312002
       },
-      "due_date": "2024-04-30T10:00:00+02:00",
-      "event_date": "2024-04-30T14:53:17+02:00",
+      "due_date": "2024-06-26T12:20:00+02:00",
+      "event_date": "2024-06-26T12:16:34+02:00",
       "event_details": {
         "source": "outcoming",
-        "status": "busy",
-        "label": "5807452",
+        "status": "scheduled",
+        "label": "5901351",
         "priority": 0
       },
       "object": {
         "type": "phonecall",
-        "id": 5513452,
+        "id": 5865875,
         "model": {
-          "id": 5513452,
+          "id": 5865875,
           "owner": {
-            "id": 305887,
+            "id": 312002,
             "type": "staff"
           },
           "source": "outcoming",
-          "description": "hey hey hey",
-          "updated": "2024-04-30T14:53:17+02:00",
-          "created": "2024-04-30T14:53:17+02:00",
+          "description": null,
+          "updated": "2024-06-26T12:16:34+02:00",
+          "created": "2024-06-26T12:16:34+02:00",
           "duration": 0,
-          "date": "2024-04-30T10:00:00+02:00",
+          "date": "2024-06-26T12:20:00+02:00",
           "topic": {
-            "id": 5807452,
+            "id": 5901351,
             "name": "Support"
           },
           "result": {
-            "id": "busy",
-            "name": "Occup\u00e9"
+            "id": "scheduled",
+            "name": "Scheduled call"
           },
           "related": [
             {
               "type": "contact",
-              "id": 53581726
-            },
-            {
-              "type": "company",
-              "id": 53867649
+              "id": 55169850
             }
           ],
-          "company_id": 53867649,
+          "company_id": null,
           "individual_id": null,
-          "contact_id": 53581726,
+          "contact_id": 55169850,
           "priority": 0
         }
       },
@@ -139,36 +98,628 @@
       "event_more": [],
       "related": [
         {
-          "type": "company",
-          "id": 53867649
-        },
-        {
           "type": "contact",
-          "id": 53581726
+          "id": 55169850
         },
         {
           "type": "thirdcontact",
-          "id": 53088082
-        },
-        {
-          "type": "thirdcontact",
-          "id": 53299834
+          "id": 55150222
         },
         {
           "type": "company",
-          "id": 53867647
+          "id": 55532589
         },
         {
           "type": "staff",
-          "id": 305887
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "mCYmVZAB2sbb82mxL21c",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-26T18:50:00+02:00",
+      "event_date": "2024-06-26T17:24:44+02:00",
+      "event_details": {
+        "source": "outcoming",
+        "status": "scheduled",
+        "label": "5901348",
+        "priority": 1
+      },
+      "object": {
+        "type": "phonecall",
+        "id": 5870145,
+        "model": {
+          "id": 5870145,
+          "owner": {
+            "id": 312002,
+            "type": "staff"
+          },
+          "source": "outcoming",
+          "description": null,
+          "updated": "2024-06-26T17:24:44+02:00",
+          "created": "2024-06-26T17:24:44+02:00",
+          "duration": 0,
+          "date": "2024-06-26T18:50:00+02:00",
+          "topic": {
+            "id": 5901348,
+            "name": "Commercial"
+          },
+          "result": {
+            "id": "scheduled",
+            "name": "Scheduled call"
+          },
+          "related": [
+            {
+              "type": "contact",
+              "id": 55169850
+            }
+          ],
+          "company_id": null,
+          "individual_id": null,
+          "contact_id": 55169850,
+          "priority": 1
+        }
+      },
+      "event": "phonecall.created",
+      "event_more": [],
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "TiYqVZAB2sbb82mxVHjw",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-27T14:10:00+02:00",
+      "event_date": "2024-06-26T17:29:15+02:00",
+      "event_details": {
+        "source": "incoming",
+        "status": "connected",
+        "label": "5901349",
+        "priority": 0
+      },
+      "object": {
+        "type": "phonecall",
+        "id": 5870199,
+        "model": {
+          "id": 5870199,
+          "owner": {
+            "id": 312002,
+            "type": "staff"
+          },
+          "source": "incoming",
+          "description": "note for  \u0022Add call\u0022* one* two* three---best regards",
+          "updated": "2024-06-27T14:21:36+02:00",
+          "created": "2024-06-26T17:29:15+02:00",
+          "duration": 1020,
+          "date": "2024-06-27T14:10:00+02:00",
+          "topic": {
+            "id": 5901349,
+            "name": "Finance"
+          },
+          "result": {
+            "id": "connected",
+            "name": "Successful Call"
+          },
+          "related": [
+            {
+              "type": "contact",
+              "id": 55169850
+            }
+          ],
+          "company_id": null,
+          "individual_id": null,
+          "contact_id": 55169850,
+          "priority": 0
+        }
+      },
+      "event": "phonecall.created",
+      "event_more": [],
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "jSujWZAB2sbb82mxRDlT",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-27T14:10:00+02:00",
+      "event_date": "2024-06-27T14:19:50+02:00",
+      "event_details": {
+        "source": "incoming",
+        "status": "connected",
+        "label": "5901349",
+        "priority": 0
+      },
+      "object": {
+        "type": "phonecall",
+        "id": 5870199,
+        "model": {
+          "id": 5870199,
+          "owner": {
+            "id": 312002,
+            "type": "staff"
+          },
+          "source": "incoming",
+          "description": "note for  \u0022Add call\u0022* one* two* three---best regards",
+          "updated": "2024-06-27T14:21:36+02:00",
+          "created": "2024-06-26T17:29:15+02:00",
+          "duration": 1020,
+          "date": "2024-06-27T14:10:00+02:00",
+          "topic": {
+            "id": 5901349,
+            "name": "Finance"
+          },
+          "result": {
+            "id": "connected",
+            "name": "Successful Call"
+          },
+          "related": [
+            {
+              "type": "contact",
+              "id": 55169850
+            }
+          ],
+          "company_id": null,
+          "individual_id": null,
+          "contact_id": 55169850,
+          "priority": 0
+        }
+      },
+      "event": "phonecall.updated",
+      "event_more": [],
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "6g-kWZABn8gs-IgE5PER",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-27T14:10:00+02:00",
+      "event_date": "2024-06-27T14:21:36+02:00",
+      "event_details": {
+        "source": "incoming",
+        "status": "connected",
+        "label": "5901349",
+        "priority": 0
+      },
+      "object": {
+        "type": "phonecall",
+        "id": 5870199,
+        "model": {
+          "id": 5870199,
+          "owner": {
+            "id": 312002,
+            "type": "staff"
+          },
+          "source": "incoming",
+          "description": "note for  \u0022Add call\u0022* one* two* three---best regards",
+          "updated": "2024-06-27T14:21:36+02:00",
+          "created": "2024-06-26T17:29:15+02:00",
+          "duration": 1020,
+          "date": "2024-06-27T14:10:00+02:00",
+          "topic": {
+            "id": 5901349,
+            "name": "Finance"
+          },
+          "result": {
+            "id": "connected",
+            "name": "Successful Call"
+          },
+          "related": [
+            {
+              "type": "contact",
+              "id": 55169850
+            }
+          ],
+          "company_id": null,
+          "individual_id": null,
+          "contact_id": 55169850,
+          "priority": 0
+        }
+      },
+      "event": "phonecall.updated",
+      "event_more": [],
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "Mgh_VJABn8gs-IgEj9jo",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-26T14:22:44+02:00",
+      "event_date": "2024-06-26T14:22:44+02:00",
+      "event_details": null,
+      "object": {
+        "type": "emailengine",
+        "id": "5dN_VJAB5f0DGLvoZET_",
+        "model": null
+      },
+      "event": "emailengine.opened",
+      "event_more": [],
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "DxaAVJABf6aklqzy3Mh9",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-26T14:24:09+02:00",
+      "event_date": "2024-06-26T14:24:09+02:00",
+      "event_details": null,
+      "object": {
+        "type": "emailengine",
+        "id": "5dN_VJAB5f0DGLvoZET_",
+        "model": null
+      },
+      "event": "emailengine.opened",
+      "event_more": [],
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "_YiAVJABSRyhjBW93EmR",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-26T14:24:09+02:00",
+      "event_date": "2024-06-26T14:24:09+02:00",
+      "event_details": null,
+      "object": {
+        "type": "emailengine",
+        "id": "5dN_VJAB5f0DGLvoZET_",
+        "model": null
+      },
+      "event": "emailengine.opened",
+      "event_more": [],
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "WySAVJAB2sbb82mx4y4J",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-26T14:24:10+02:00",
+      "event_date": "2024-06-26T14:24:10+02:00",
+      "event_details": null,
+      "object": {
+        "type": "emailengine",
+        "id": "5dN_VJAB5f0DGLvoZET_",
+        "model": null
+      },
+      "event": "emailengine.opened",
+      "event_more": [],
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "xQh_VJABn8gs-IgEcdfS",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-26T14:22:35+02:00",
+      "event_date": "2024-06-26T14:22:35+02:00",
+      "event_details": null,
+      "object": {
+        "type": "emailengine",
+        "id": "5dN_VJAB5f0DGLvoZET_",
+        "model": null
+      },
+      "event": "emailengine.sent",
+      "event_more": {
+        "subject": "Deskpro Ltd. - Rendez-vous sur",
+        "snippet": "Bonjour Mr Durand [edited],\u003Cbr \/\u003E\u003Cbr \/\u003EComme convenu, vous trouverez le lien pour acc\u00e9der \u00e0 notre site internet o\u00f9 vous retrouverez le d\u00e9tail de nos tarifs : ,\u003Cbr \/\u003E\u003Cbr \/\u003EEn vous remerciant pour votre confiance,\u003Cbr \/\u003EBien cordialement,\u003Cp\u003E\u003C\/p\u003E\u003Cp\u003E\u003C\/p\u003E\u003Cp\u003EDeskpro Ltd. - Mr Ilia Makarov\u003Cbr \/\u003Ephone. : \u003Ca\u003E063 105 5414\u003C\/a\u003E\u003Cbr \/\u003E\u003C\/p\u003E",
+        "thread_id": null,
+        "message_id": null,
+        "provider": "nylas",
+        "from": {
+          "email": "xzpawnx@gmail.com",
+          "name": "Ilia Makarov"
+        }
+      },
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "KgsjVZABn8gs-IgEOyKc",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-26T17:21:30+02:00",
+      "event_date": "2024-06-26T17:21:30+02:00",
+      "event_details": null,
+      "object": {
+        "type": "emailengine",
+        "id": "LBwjVZABKKsFCageMgR4",
+        "model": null
+      },
+      "event": "emailengine.sent",
+      "event_more": {
+        "subject": "One more email",
+        "snippet": "\u003Cp\u003EI see that you provided some Lorem Ipsum text. If you would like help crafting a compelling email to your customers or prospects, please share more information or a specific message you would like to convey. I\u0027m here to assist you with writing effective emails that resonate with your audience.\u003C\/p\u003E\u003Cp\u003EDeskpro Ltd. - Mr Ilia Makarov\u003Cbr \/\u003Ephone. : \u003Ca\u003E063 105 5414\u003C\/a\u003E\u003C\/p\u003E",
+        "thread_id": null,
+        "message_id": null,
+        "provider": "nylas",
+        "from": {
+          "email": "xzpawnx@gmail.com",
+          "name": "Ilia Makarov"
+        }
+      },
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "XgcLVJABn8gs-IgEHtZO",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-26T12:15:32+02:00",
+      "event_date": "2024-06-26T12:15:32+02:00",
+      "event_details": null,
+      "object": {
+        "type": "emailengine",
+        "id": "WFcLVJABvGERZUI0FV6A",
+        "model": null
+      },
+      "event": "emailengine.sent",
+      "event_more": {
+        "subject": "Email Subject",
+        "snippet": "\u003Cp\u003Ehey hop, let\u0027s go\u003C\/p\u003E\u003Cp\u003E\u003C\/p\u003E\u003Cp\u003EDeskpro Ltd. - Mr Ilia Makarov\u003Cbr \/\u003Ephone. : \u003Ca\u003E063 105 5414\u003C\/a\u003E\u003Cbr \/\u003E\u003C\/p\u003E",
+        "thread_id": null,
+        "message_id": null,
+        "provider": "nylas",
+        "from": {
+          "email": "xzpawnx@gmail.com",
+          "name": "Ilia Makarov"
+        }
+      },
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
+        }
+      ]
+    },
+    {
+      "id": "RhUNVJABf6aklqzyS8R8",
+      "author": {
+        "type": "staff",
+        "id": 312002
+      },
+      "due_date": "2024-06-26T12:17:54+02:00",
+      "event_date": "2024-06-26T12:17:54+02:00",
+      "event_details": null,
+      "object": {
+        "type": "emailengine",
+        "id": "WVcNVJABvGERZUI0RV6A",
+        "model": null
+      },
+      "event": "emailengine.received",
+      "event_more": {
+        "subject": "Delivery Status Notification (Failure)",
+        "snippet": "** Address not found **\u003Cbr\/\u003E\u003Cbr\/\u003EYour message wasn\u0027t delivered to michel@sellsy-enchante.fr because the domain sellsy-enchante.fr couldn\u0027t be found. Check for typos or unnecessary spaces and try again.\u003Cbr\/\u003E\u003Cbr\/\u003ELearn more here: https:\/\/support.google.com\/mail\/?p=BadRcptDomain\u003Cbr\/\u003E\u003Cbr\/\u003EThe response was:\u003Cbr\/\u003E\u003Cbr\/\u003EDNS Error: DNS type \u0027mx\u0027 lookup of sellsy-enchante.fr responded with code NXDOMAIN\u003Cbr\/\u003EDomain name not found: sellsy-enchante.fr For more information, go to https:\/\/support.google.com\/mail\/?p=BadRcptDomain\u003Cbr\/\u003E",
+        "thread_id": "\u003CCAK7HdtAzAdw6E+WEh9Kq9=YQhWZ90imYOPvLHV8OyyZqHRdG2Q@mail.gmail.com\u003E",
+        "message_id": "\u003C667bea45.050a0220.dfad1.e1fd.GMR@mx.google.com\u003E",
+        "provider": "nylas",
+        "from": {
+          "email": "mailer-daemon@googlemail.com",
+          "name": "Mail Delivery Subsystem"
+        }
+      },
+      "related": [
+        {
+          "type": "contact",
+          "id": 55169850
+        },
+        {
+          "type": "thirdcontact",
+          "id": 55150222
+        },
+        {
+          "type": "company",
+          "id": 55532589
+        },
+        {
+          "type": "staff",
+          "id": 312002
         }
       ]
     }
   ],
   "pagination": {
-    "limit": 25,
-    "count": 2,
-    "total": 2,
-    "offset": "WyI1NTEzNDUyIiwicGhvbmVjYWxsLmNyZWF0ZWQiLDE3MTQ0ODE1OTgwMDAsMzFd"
+    "limit": 100,
+    "count": 14,
+    "total": 14,
+    "offset": "WyJXVmNOVkpBQnZHRVJaVUkwUlY2QSIsImVtYWlsZW5naW5lLnJlY2VpdmVkIiwxNzE5Mzk3MDc1MDAwLDFd"
   }
 }

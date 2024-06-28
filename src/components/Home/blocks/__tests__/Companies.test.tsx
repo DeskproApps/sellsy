@@ -18,24 +18,19 @@ describe("Home", () => {
       cleanup();
     });
 
-    test("render", async () => {
-      const { findByText } = renderCompanies();
+    test("render", () => {
+      const { queryByText } = renderCompanies();
 
-      expect(await findByText(/Linked companies \(2\)/i)).toBeInTheDocument();
+      expect(queryByText(/Linked companies \(1\)/i)).toBeInTheDocument();
 
-      expect(await findByText(/Société X \(test\)/i)).toBeInTheDocument();
-      expect(await findByText(/contact\+x@sellsy\.com/i)).toBeInTheDocument();
-      expect(await findByText(/23 Apr 2024/i)).toBeInTheDocument();
-
-      expect(await findByText(/Société A \(test\)/i)).toBeInTheDocument();
-      expect(await findByText(/contact\+a@sellsy.com/i)).toBeInTheDocument();
-      expect(await findByText(/20 Apr 2024/i)).toBeInTheDocument();
+      expect(queryByText(/Enchante/i)).toBeInTheDocument();
+      expect(queryByText(/contact@sellsy\.fr/i)).toBeInTheDocument();
+      expect(queryByText(/25 Jun 2024/i)).toBeInTheDocument();
     });
 
-    test("should show \"No companies found\" if no companies", async () => {
-      const { findByText } = renderCompanies({ companies: [] });
-
-      expect(await findByText(/No conpanies found/i)).toBeInTheDocument();
+    test("should show \"No companies found\" if no companies", () => {
+      const { queryByText } = renderCompanies({ companies: [] });
+      expect(queryByText(/No conpanies found/i)).toBeInTheDocument();
     });
   });
 });
