@@ -1,5 +1,5 @@
-import { useState, useMemo, useCallback } from "react";
-import { get, isEmpty } from "lodash";
+import { useState, useCallback } from "react";
+import { isEmpty } from "lodash";
 import { useNavigate } from "react-router-dom";
 import { useDeskproAppClient, useDeskproLatestAppContext } from "@deskpro/app-sdk";
 import { getEntityListService, deleteEntityService } from "../services/deskpro";
@@ -19,10 +19,10 @@ const useUnlinkContact: UseUnlinkContact = () => {
   const { context } = useDeskproLatestAppContext() as { context: UserContext };
   const { asyncErrorHandler } = useAsyncError();
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const dpUserId = useMemo(() => get(context, ["data", "user", "id"]), [context]);
+  const dpUserId = context?.data?.user?.id;
 
   const unlink = useCallback(() => {
-    if (!client) {
+    if (!client || !dpUserId) {
       return;
     }
 
