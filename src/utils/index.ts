@@ -8,3 +8,8 @@ export { getFullName } from "./getFullName";
 export { getExternalLinks } from "./getExternalLinks";
 export { tryToLinkAutomatically } from "./tryToLinkAutomatically";
 export { isLast } from "./isLast";
+export { isCall } from "./isCall";
+export { isEmail } from "./isEmail";
+export { retryUntilHavePagination } from "./retryUntilHavePagination";
+export { filterActivities } from "./filterActivities";
+export { addBlankTargetToLinks } from "./addBlankTargetToLinks";

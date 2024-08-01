@@ -8,6 +8,10 @@ import {
   getContactCompaniesService,
 } from "../services/sellsy";
 import { QueryKey } from "../query";
+import {
+  filterActivities,
+  retryUntilHavePagination,
+} from "../utils";
 import type { Maybe, UserContext } from "../types";
 import type { Contact, Company, Activity } from "../services/sellsy/types";
 
@@ -17,6 +21,8 @@ type UseContact = () => {
   companies: Company[];
   activities: Activity[];
 };
+
+const retryActivitiesService = retryUntilHavePagination(getActivitiesService);
 
 const useContact: UseContact = () => {
   const { context } = useDeskproLatestAppContext() as { context: UserContext };
@@ -44,7 +50,7 @@ const useContact: UseContact = () => {
 
   const activities = useQueryWithClient(
     [QueryKey.CONTACT_ACTIVITIES, contactId as string],
-    (client) => getActivitiesService(client, contactId as Contact["id"]),
+    (client) => retryActivitiesService(client, contactId as Contact["id"], "contact"),
     { enabled: Boolean(contactId) },
   );
 
@@ -52,7 +58,9 @@ const useContact: UseContact = () => {
     isLoading: [contactIds, contact, companies].some(({ isLoading }) => isLoading),
     contact: contact.data,
     companies: get(companies, ["data", "data"]) || [],
-    activities: get(activities, ["data", "data"]) || [],
+    activities: useMemo(() => {
+      return filterActivities(get(activities.data, ["data"]));
+    }, [activities.data]),
   };
 };
 
