@@ -69,7 +69,7 @@ const useLogin = (): Result => {
   }, [key, callback, clientId, codeVerifier]);
 
   const poll = useCallback(() => {
-    if (!client || !callback?.poll || !callback?.callbackUrl) {
+    if (!client || !callback?.poll || !callback?.callbackUrl || !dpUser) {
       return;
     }
 

@@ -12,7 +12,7 @@ export type Props = {
 const Email: FC<Props> = ({ activity }) => {
   const title = useMemo(() => {
     return get(activity, ["event_more", "subject"]) || "Email";
-  }, [activity]);
+  }, [activity]) as string;
 
   return (
     <>
