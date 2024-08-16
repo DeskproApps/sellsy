@@ -16,7 +16,7 @@ const Email: FC<Props> = ({ activity }) => {
 
   return (
     <>
-      <Title title={title} />
+      <Title title={title as string} />
       <TwoProperties
         leftLabel="Type"
         leftText="Email"
