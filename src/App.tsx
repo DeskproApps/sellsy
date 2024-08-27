@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import { useDebouncedCallback } from "use-debounce";
 import { match } from "ts-pattern";
@@ -26,11 +26,9 @@ import type { EventPayload } from "./types";
 
 const App: FC = () => {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
   const { client } = useDeskproAppClient();
   const { unlink, isLoading: isLoadingUnlink } = useUnlinkContact();
   const { logout, isLoading: isLoadingLogout } = useLogout();
-  const isAdmin = useMemo(() => pathname.includes("/admin/"), [pathname]);
   const isLoading = useMemo(() => {
     return !client || isLoadingUnlink || isLoadingLogout
   }, [client, isLoadingUnlink, isLoadingLogout]);
@@ -73,7 +71,6 @@ const App: FC = () => {
         <Route path="/contacts/edit" element={<EditContactPage/>}/>
         <Route index element={<LoadingAppPage/>} />
       </Routes>
-      {!isAdmin && (<><br/><br/><br/></>)}
     </ErrorBoundary>
   );
 };
