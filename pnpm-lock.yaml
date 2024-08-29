@@ -23,9 +23,6 @@ importers:
       '@tanstack/react-query':
         specifier: ^4.36.1
         version: 4.36.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      iframe-resizer:
-        specifier: ^5.2.4
-        version: 5.2.4
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -654,18 +651,6 @@ packages:
   '@humanwhocodes/object-schema@2.0.3':
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
-
-  '@iframe-resizer/child@5.2.4':
-    resolution: {integrity: sha512-4dWgCLgc5d1j9rpNeIXEnVFf1Eoi4/6/g+2Un7589OFOIlXt57jrnDfp5ZOwAVjQ16GBleiFH54WWB/ikFHJJA==}
-
-  '@iframe-resizer/core@5.2.4':
-    resolution: {integrity: sha512-axabR3S6zWHTGIWD3BBjzRY2UKJgZWN1xLuG788+tI4MlAkTCyeXydIQaG89xy+F4aUwkrVRabY81VN6u/7Ziw==}
-
-  '@iframe-resizer/jquery@5.2.4':
-    resolution: {integrity: sha512-C7s4egUFNYROhZ2ajMOHOoiRofGY4uknuYZuM1xa2pHrHTuKs3zRiwsgM2q3TsCtdNoCRY9sI8M6kU9svMciMA==}
-
-  '@iframe-resizer/parent@5.2.4':
-    resolution: {integrity: sha512-qJXUNiIpk1dRDMRL/XjjC5JQJ8BtONzFmctzZIxCSm6NZ3yxyJntmQfuOwiZWLW4bWVSocSEN5B1HKemyF5L/A==}
 
   '@istanbuljs/load-nyc-config@1.1.0':
     resolution: {integrity: sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ==}
@@ -1813,9 +1798,6 @@ packages:
   iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
-
-  iframe-resizer@5.2.4:
-    resolution: {integrity: sha512-txvuX+Evq5PWN6mpOfCsF7gGl3wxPfc4ZWQ031IzWRAu5svdIUoIzpE4pIRYaDg7TXIo7BKKguDNcgPBLAUskg==}
 
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
@@ -3466,18 +3448,6 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@iframe-resizer/child@5.2.4': {}
-
-  '@iframe-resizer/core@5.2.4': {}
-
-  '@iframe-resizer/jquery@5.2.4':
-    dependencies:
-      '@iframe-resizer/core': 5.2.4
-
-  '@iframe-resizer/parent@5.2.4':
-    dependencies:
-      '@iframe-resizer/core': 5.2.4
-
   '@istanbuljs/load-nyc-config@1.1.0':
     dependencies:
       camelcase: 5.3.1
@@ -4811,12 +4781,6 @@ snapshots:
   iconv-lite@0.6.3:
     dependencies:
       safer-buffer: 2.1.2
-
-  iframe-resizer@5.2.4:
-    dependencies:
-      '@iframe-resizer/child': 5.2.4
-      '@iframe-resizer/jquery': 5.2.4
-      '@iframe-resizer/parent': 5.2.4
 
   ignore@5.3.2: {}
 
