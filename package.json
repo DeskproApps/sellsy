@@ -37,7 +37,7 @@
     "@deskpro/app-testing-utils": "^1.0.1",
     "@jest/globals": "^29.7.0",
     "@swc/core": "^1.5.0",
-    "@swc/helpers": "^0.5.10",
+    "@swc/helpers": "^0.5.15",
     "@swc/jest": "^0.2.36",
     "@testing-library/dom": "^10.0.0",
     "@testing-library/jest-dom": "^6.4.2",
