@@ -2,7 +2,7 @@
   "name": "@deskpro-apps/sellsy",
   "title": "Sellsy",
   "description": "View your Sellsy CRM data alongside your interactions with your users to streamline your customer management.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scope": "agent",
   "isSingleInstall": false,
   "hasDevMode": true,
