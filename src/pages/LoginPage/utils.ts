@@ -38,7 +38,7 @@ export const sha256 = async (plain: string): Promise<string> => {
 export const generateCodeVerifier = (): string => {
   const array = new Uint8Array(32);
   crypto.getRandomValues(array);
-  return base64UrlEncode(array);
+  return base64UrlEncode(array.buffer);
 };
 
 export const generateCodeChallenge = (codeVerifier: string): Promise<string> => {
