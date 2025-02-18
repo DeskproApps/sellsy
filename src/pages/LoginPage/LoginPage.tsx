@@ -4,7 +4,7 @@ import { Login } from "../../components";
 import type { FC } from "react";
 
 const LoginPage: FC = () => {
-  const { poll, authUrl, isLoading, error } = useLogin();
+  const { onLogIn, authUrl, isLoading, error } = useLogin();
 
   useSetTitle();
 
@@ -13,7 +13,7 @@ const LoginPage: FC = () => {
   return (
     <Login
       error={error}
-      onLogin={poll}
+      onLogin={onLogIn}
       authUrl={authUrl}
       isLoading={isLoading}
     />

@@ -1,9 +1,7 @@
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useRef } from 'react';
 import { get, size } from "lodash";
 import { useNavigate } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
 import {
-  useDeskproAppClient,
   useDeskproLatestAppContext,
   useInitialisedDeskproAppClient,
 } from "@deskpro/app-sdk";
@@ -20,11 +18,10 @@ import {
   generateCodeVerifier,
   generateCodeChallenge,
 } from "./utils";
-import type { OAuth2StaticCallbackUrl } from "@deskpro/app-sdk";
-import type { Maybe, UserContext } from "../../types";
+import type { Maybe, Settings } from '../../types';
 
 export type Result = {
-  poll: () => void,
+  onLogIn: () => void,
   authUrl: string|null,
   error: Maybe<string>,
   isLoading: boolean,
@@ -33,74 +30,82 @@ export type Result = {
 const useLogin = (): Result => {
   const navigate = useNavigate();
   const [error, setError] = useState<Maybe<string>>(null);
-  const [callback, setCallback] = useState<OAuth2StaticCallbackUrl|undefined>();
   const { asyncErrorHandler } = useAsyncError();
-  const [authUrl, setAuthUrl] = useState<string|null>(null);
+  const callbackURLRef = useRef('');
+  const [authUrl, setAuthUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const { context } = useDeskproLatestAppContext() as { context: UserContext };
-  const { client } = useDeskproAppClient();
-  const clientId = useMemo(() => get(context, ["settings", "client_id"]), [context]);
+  const { context } = useDeskproLatestAppContext<unknown, Settings>();
   const dpUser = useMemo(() => get(context, ["data", "user"]), [context]);
-  const key = useMemo(() => uuidv4(), []);
   const codeVerifier = useMemo(() => generateCodeVerifier(), []);
 
-  useInitialisedDeskproAppClient(
-    (client) => {
-      client.oauth2()
-        .getGenericCallbackUrl(key, /code=(?<token>[^&]+)/, /state=(?<key>[^&]+)/)
-        .then(setCallback);
-    },
-    [setCallback]
-  );
+  useInitialisedDeskproAppClient(async client => {
+    if (context?.settings.use_deskpro_saas === undefined) return;
 
-  useEffect(() => {
-    if (callback?.callbackUrl && clientId) {
-      generateCodeChallenge(codeVerifier).then((codeChallenge) => {
-        setAuthUrl(`${AUTH_URL}/authorization?${getQueryParams({
-          response_type: "code",
-          client_id: clientId,
-          redirect_uri: callback.callbackUrl,
+    const clientID = context.settings.client_id;
+    const mode = context?.settings.use_deskpro_saas ? 'global' : 'local';
+
+    if (mode === 'local' && typeof clientID !== 'string') return;
+
+    const codeChallenge = await generateCodeChallenge(codeVerifier);
+
+    const oauth2 = mode === 'global' ? await client.startOauth2Global('c320305b814baefa20b872ccee5f5815') : await client.startOauth2Local(
+      ({ callbackUrl, state }) => {
+        callbackURLRef.current = callbackUrl;
+
+        return `${AUTH_URL}/authorization?${getQueryParams({
+          client_id: clientID,
+          state,
+          response_type: 'code',
+          code_challenge_method: 'S256',
           code_challenge: codeChallenge,
-          code_challenge_method: "S256",
-          state: key,
-        })}`);
-      })
-    }
-  }, [key, callback, clientId, codeVerifier]);
+          redirect_uri: callbackUrl,
+        })}`;
+      },
+      /code=(?<code>[^&]+)/,
+      async code => {
+        const { access_token, refresh_token } = await getAccessTokenService(client, {
+          code,
+          codeVerifier,
+          redirectUri: callbackURLRef.current
+        });
 
-  const poll = useCallback(() => {
-    if (!client || !callback?.poll || !callback?.callbackUrl || !dpUser) {
-      return;
-    }
-
+        return {
+          data: { access_token, refresh_token }
+        };
+      }
+    );
+    
+    setAuthUrl(oauth2.authorizationUrl);
     setError(null);
-    setTimeout(() => setIsLoading(true), 500);
 
-    callback.poll()
-      .then(({ token }) => getAccessTokenService(client, {
-        code: token,
-        redirectUri: callback.callbackUrl,
-        codeVerifier: codeVerifier,
-      }))
-      .then(({ access_token, refresh_token }) => Promise.all([
-        setAccessTokenService(client, access_token),
-        setRefreshTokenService(client, refresh_token),
-      ]))
-      .catch((err) => {
-        setIsLoading(false);
-        setError(get(err, ["data", "hint"])
-          || get(err, ["data", "error_description"])
-          || DEFAULT_ERROR
-        );
-      })
-      .then(() => checkAuthService(client))
-      .then(() => tryToLinkAutomatically(client, dpUser))
-      .then(() => getEntityListService(client, dpUser.id))
-      .then((entityIds) => navigate(size(entityIds) ? "/home" : "/contacts/link"))
-      .catch(asyncErrorHandler)
-  }, [client, callback, codeVerifier, asyncErrorHandler, dpUser, navigate]);
+    try {
+      const pollResult = await oauth2.poll();
 
-  return { authUrl, poll, error, isLoading };
+      await setAccessTokenService(client, pollResult.data.access_token);
+      pollResult.data.refresh_token && await setRefreshTokenService(client, pollResult.data.refresh_token);
+      await checkAuthService(client);
+      await tryToLinkAutomatically(client, dpUser);
+
+      const entityIDs = await getEntityListService(client, dpUser.id);
+
+      navigate(size(entityIDs) ? '/home' : '/contacts/link');
+    } catch (error) {
+      setError(get(error, ['data', 'hint'])
+        || get(error, ['data', 'error_description'])
+        || DEFAULT_ERROR
+      );
+      asyncErrorHandler(error instanceof Error ? error : new Error('Unknown Error'));
+    } finally {
+      setIsLoading(false);
+    };
+  });
+
+  const onLogIn = useCallback(() => {
+    setIsLoading(true);
+    window.open(authUrl, '_blank');
+  }, [setIsLoading, authUrl]);
+
+  return { authUrl, onLogIn, error, isLoading };
 };
 
 export { useLogin };

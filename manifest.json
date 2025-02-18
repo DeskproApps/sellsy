@@ -24,7 +24,7 @@
       "order": 5
     },
     "client_id": {
-      "title": "Client id",
+      "title": "Client ID",
       "type": "string",
       "isRequired": false,
       "isBackendOnly": false,
