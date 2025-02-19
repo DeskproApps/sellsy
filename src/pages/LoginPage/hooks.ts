@@ -48,7 +48,7 @@ const useLogin = (): Result => {
 
     const codeChallenge = await generateCodeChallenge(codeVerifier);
 
-    const oauth2 = mode === 'global' ? await client.startOauth2Global('c320305b814baefa20b872ccee5f5815') : await client.startOauth2Local(
+    const oauth2 = mode === 'global' ? await client.startOauth2Global('26b26604-eadf-4fec-9b91-1cf685ad4449') : await client.startOauth2Local(
       ({ callbackUrl, state }) => {
         callbackURLRef.current = callbackUrl;
 
