@@ -51,7 +51,7 @@
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "@typescript/lib-dom": "npm:@types/web@^0.0.143",
-    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-react": "^4.4.1",
     "adm-zip": "^0.5.16",
     "cross-env": "7.0.3",
     "eslint": "^8.57.1",
