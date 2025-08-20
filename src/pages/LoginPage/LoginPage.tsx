@@ -1,10 +1,10 @@
 import { useSetTitle, useRegisterElements } from "../../hooks";
-import { useLogin } from "./hooks";
 import { Login } from "../../components";
 import type { FC } from "react";
+import { useLogin } from "./hooks";
 
 const LoginPage: FC = () => {
-  const { poll, authUrl, isLoading, error } = useLogin();
+  const { onSignIn, authUrl, isLoading, error } = useLogin();
 
   useSetTitle();
 
@@ -13,7 +13,7 @@ const LoginPage: FC = () => {
   return (
     <Login
       error={error}
-      onLogin={poll}
+      onLogin={onSignIn}
       authUrl={authUrl}
       isLoading={isLoading}
     />

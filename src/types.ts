@@ -35,7 +35,8 @@ export type Request = <T>(
 /** Deskpro types */
 export type Settings = {
   client_id?: string;
-  client_secret?: string;
+  use_advanced_connect?: boolean,
+
 };
 
 export type DPUser = {

@@ -6,6 +6,7 @@
   "scope": "agent",
   "isSingleInstall": false,
   "hasDevMode": true,
+  "secrets": "HZwEscXWB41FwcYpHzeix9i2ByRktz+fXGPsJlhtaY88c82Gre2FwqTXFrHTdJDCmwS3a1btd98WO0nbQEH0V7tASkn3uvTSawkNtY8z6JK7A26Ah5PSNFgsF0TGvl1de5CYzEezLmAmFqVMsjBz1eUSP6UHJey5142IvsAaPbsSAmP1KazfGLY4YQFLU4wRhY0O+jvs+kcEeECK2a9pjh6hwq5ZBQezYbRFXmbbcBPQuTdXklx08ikTMMnZbSvnfjxyxn8p5KhmUxjK+1VRvaY/yZGTdlL48RSY/ZjKL6I7oMoSh64Wkn1otLlBwZIn8PMXyYJTSFcZ0zscXydT5KP1fIK/OAdhc8S2yVk85sJ4greA2l60f2Iyit4i2nF+3SKDNGOq9Zhv5+mzs/SxPGt+e7g5jg2J9uWik+Brn4PRv5ssyBM+y+XjyAx2O9ZJO5yQyUpW5A3wbi3+7FpYpOc4/csZa2OfCDoTVrQeYkJQh/UL4V7V6Fw6O84s+ohaNmxPpZdiIFWqqTh31wvc6LPRjD8OBq54QV7ZN9r9IueUkwX6NbKkIWpX4rIqmHN/JBjl5oLOTtPPTfHajKTYELcclC/1A+JzYUX6T8I71yt4kdfUABbCgQbKZVnUpp2mSG0K/PqeLPV+yGhd1E2/kbPxarRFdlVt77iJcuv01ULG3SfsXYgs5kHLMOAA1aJ07CZgXpmz1WQe0yfjj8TZ5RuSVb/SfmqW8Tpgk6pk/QUfDEC077phtC6LZx88eR6VidiLeAg0F/yXzC3x6EgRRrqRVL/OmijkeJVcic6AiNzGUOcoee26XYBtN6pdfyxOfBHZS6MijvCS05HWXmEWzVrw+AXWowzKniJAXzub84+RWsDWdK8D0agztH7Jx0J5Gj6lEgtOa1jUDysCqI3Rhr9mWQTVueiEz+AnfKREUt8WcN3BanEvcaHKrYNoZZX3rTU3xXtdI9gWYyPQLtbPpVQY15Et73rj8qm+Zni6mNSZuUbxmQnzHoqh+s277lWN4qPBuwSaq+wx8KCDj1Wf8A==",
   "serveUrl": "https://apps-cdn.deskpro-service.com/__name__/__version__",
   "targets": [{ "target": "user_sidebar", "entrypoint": "index.html" }],
   "entityAssociations": {
@@ -16,18 +17,29 @@
     }
   },
   "settings": {
+    "use_advanced_connect": {
+      "title": "Advanced Connect",
+      "description": "Follow the setup guide and use your credentials to connect the app to Deskpro.",
+      "type": "boolean",
+      "default": false,
+      "isRequired": false,
+      "isBackendOnly": false,
+      "order": 5
+    },
     "client_id": {
       "title": "Client id",
       "type": "string",
-      "isRequired": true,
+      "isRequired": false,
       "isBackendOnly": false,
+      "condition": "settings.use_advanced_connect != false",
       "order": 10
     },
     "client_secret": {
       "title": "Client Secret",
       "type": "string",
-      "isRequired": true,
+      "isRequired": false,
       "isBackendOnly": true,
+      "condition": "settings.use_advanced_connect != false",
       "order": 20
     },
     "callback_url": {
@@ -36,6 +48,7 @@
       "options": { "entrypoint": "#/admin/callback" },
       "isRequired": false,
       "isBackendOnly": true,
+      "condition": "settings.use_advanced_connect != false",
       "order": 30
     }
   },

@@ -13,3 +13,4 @@ export { isEmail } from "./isEmail";
 export { retryUntilHavePagination } from "./retryUntilHavePagination";
 export { filterActivities } from "./filterActivities";
 export { addBlankTargetToLinks } from "./addBlankTargetToLinks";
+export { generatePKCEPair } from "./generatePKCEPair";
