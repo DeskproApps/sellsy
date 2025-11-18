@@ -24,7 +24,7 @@ export const placeholders = {
   CLIENT_SECRET: "__client_secret__",
   ACCESS_TOKEN: `[user[${ACCESS_TOKEN_PATH}]]`,
   REFRESH_TOKEN: `[user[${REFRESH_TOKEN_PATH}]]`,
-};
+} as const;
 
 /** Sellsy Pro */
 export const SELLSY_URL = "https://www.sellsy.com";
