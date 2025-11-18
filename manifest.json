@@ -44,12 +44,21 @@
       {
         "url": "https://login.sellsy.com/oauth2/.*",
         "methods": ["POST"],
-        "timeout": 20
+        "timeout": 20,
+        "settingsInjection": {
+          "client_id": {
+            "body": ["client_id"]
+          },
+          "client_secret": {
+            "body": ["client_secret"]
+          }
+        }
       },
       {
         "url": "https://api.sellsy.com/v2/.*",
         "methods": ["GET", "POST", "PUT"],
-        "timeout": 20
+        "timeout": 20,
+        "settingsInjection": {}
       }
     ]
   }
